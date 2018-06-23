@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MaterialModule} from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from '@angular/Flex-layout'
+import {FlexLayoutModule} from '@angular/Flex-layout';
+import {RoutingModule} from '../app/routing/routing.module'
+
 
 
 import { AppComponent } from './app.component';
@@ -20,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
