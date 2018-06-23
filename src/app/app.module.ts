@@ -5,6 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/Flex-layout';
 import {RoutingModule} from '../app/routing/routing.module';
 import {DataService} from './data/data.service';
+import { AuthService } from './auth.service';
+import { ToastrModule } from 'ngx-toastr'
 
 
 
@@ -24,10 +26,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    RoutingModule
+    RoutingModule,
+    ToastrModule.forRoot()
     
   ],
-  providers: [DataService],
+  providers: [DataService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

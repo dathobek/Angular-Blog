@@ -3,6 +3,10 @@ import {Post} from '../Post';
 import {DataService } from '../data/data.service';
 import {DataSource} from '@angular/cdk/table';
 import {Observable} from 'rxjs/Observable';
+import {AuthService} from '../auth.service';
+
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +15,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private dataService: DataService) { 
+  constructor(private dataService: DataService,private auth:AuthService) { 
 
   }
 
@@ -20,6 +24,15 @@ export class DashboardComponent implements OnInit {
    
   displayedColumns = ['date_posted', 'title', 'category', 'delete'];
   dataSource = new PostDataSource(this.dataService);
+
+  deletePost(id) {
+    if (this.auth.isAuthenticated()) {
+      this.dataService.deletePost(id);
+      this.dataSource = new PostDataSource(this.dataService);
+    } else {
+      alert('Login in Before');
+    }
+  }
   
   }
 
