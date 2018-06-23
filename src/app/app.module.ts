@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {MaterialModule} from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/Flex-layout';
-import {RoutingModule} from '../app/routing/routing.module'
+import {RoutingModule} from '../app/routing/routing.module';
+import {DataService} from './data/data.service';
 
 
 
@@ -26,7 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RoutingModule
     
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
