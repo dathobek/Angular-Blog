@@ -22,7 +22,8 @@ import {FormsModule} from '@angular/forms'
     AppComponent,
     WelcomeComponent,
     DashboardComponent,
-    PostDialogComponent
+    PostDialogComponent,
+    
   ],
   imports: [
     BrowserModule,
