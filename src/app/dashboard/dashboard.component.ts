@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
       this.dataService.deletePost(id);
       this.dataSource = new PostDataSource(this.dataService);
     } else {
-      alert('Login in Before');
+      alert('Login Before You Can Delete');
     }
   }
   
