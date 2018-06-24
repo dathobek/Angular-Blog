@@ -13,13 +13,15 @@ import { ToastrModule } from 'ngx-toastr'
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PostDialogComponent } from './post-dialog/post-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    PostDialogComponent
   ],
   imports: [
     BrowserModule,
